@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://fsrsxm4etstn"]
+
+[ext_resource type="PackedScene" uid="uid://jan3iujutd2k" path="res://scenes/menus/main_menu.tscn" id="1_2tq5q"]
+[ext_resource type="Texture2D" uid="uid://b7v7bkues00uo" path="res://assets/img/steamhappy_bg.png" id="1_20uvt"]
+[ext_resource type="Script" path="res://scenes/SteamhappyBG.gd" id="2_keb8k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ftiv"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(0, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epaen"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(384, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grkoi"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(768, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkux6"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(1152, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqrdt"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(1536, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsv0i"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(1920, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uxrq"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(2304, 0, 384, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwonr"]
+atlas = ExtResource("1_20uvt")
+region = Rect2(2688, 0, 384, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdqlm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ftiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epaen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grkoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkux6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqrdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsv0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uxrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwonr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Main" type="Node"]
+
+[node name="BlackBG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SteamhappyBG" type="AnimatedSprite2D" parent="."]
+position = Vector2(683, 384)
+scale = Vector2(3.5599, 4.01042)
+sprite_frames = SubResource("SpriteFrames_xdqlm")
+autoplay = "default"
+script = ExtResource("2_keb8k")
+
+[node name="Swap" type="Node" parent="."]
+
+[node name="MainMenu" parent="Swap" instance=ExtResource("1_2tq5q")]
+offset_left = -1.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw7ixa5t7c7h6"]
+
+[ext_resource type="Script" path="res://global/scene_manager.gd" id="1_apypx"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_apypx")

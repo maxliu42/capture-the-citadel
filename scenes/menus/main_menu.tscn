@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://jan3iujutd2k"]
+
+[ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_ee684"]
+[ext_resource type="FontFile" uid="uid://3wau5ec1xpv2" path="res://assets/font/helvetica-compressed.otf" id="3_2xjgv"]
+[ext_resource type="FontFile" uid="uid://cjaj1rlxngw3" path="res://assets/font/helvetica.ttf" id="4_risto"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 38
+theme_override_constants/margin_right = 400
+script = ExtResource("1_ee684")
+
+[node name="Header" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_2xjgv")
+theme_override_font_sizes/font_size = 72
+text = "Capture the Citadel"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Header"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("4_risto")
+theme_override_font_sizes/font_size = 38
+text = "Version 0.10"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -222.0
+offset_right = 137.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Play" type="Button" parent="Control/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play!"
+
+[node name="Settings" type="Button" parent="Control/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Control/ButtonContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[connection signal="pressed" from="Control/ButtonContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/ButtonContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/ButtonContainer/Quit" to="." method="_on_quit_pressed"]
