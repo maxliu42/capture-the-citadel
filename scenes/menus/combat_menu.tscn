@@ -98,7 +98,7 @@ text = "Energy: 3/3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings" parent="NinePatchRect" instance=ExtResource("4_qonnf")]
+[node name="Settings" parent="NinePatchRect" groups=["Buttons"] instance=ExtResource("4_qonnf")]
 layout_mode = 1
 offset_left = -105.0
 offset_right = 151.0

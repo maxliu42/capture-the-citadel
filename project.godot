@@ -17,7 +17,9 @@ config/icon="res://assets/img/steamhappy.png"
 
 [autoload]
 
-SceneManager="*res://global/scene_manager.gd"
+AudioManager="*res://global/audio_manager.tscn"
+GameManager="*res://global/game_manager.tscn"
+SceneManager="*res://global/scene_manager.tscn"
 
 [display]
 

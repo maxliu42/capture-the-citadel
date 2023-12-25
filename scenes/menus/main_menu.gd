@@ -15,6 +15,7 @@ func _on_play_pressed():
 	SceneManager.switch_target_scene("res://scenes/menus/combat_menu.tscn",
 	get_parent())
 
+
 func _on_settings_pressed():
 	SceneManager.switch_target_scene("res://scenes/menus/settings_menu.tscn",
 	get_parent())

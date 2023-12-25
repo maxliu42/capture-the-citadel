@@ -58,7 +58,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Back" type="Button" parent="ButtonContainer/Control"]
+[node name="Back" type="Button" parent="ButtonContainer/Control" groups=["Buttons"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
