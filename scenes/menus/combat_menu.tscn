@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b6yverw7nv5fh" path="res://assets/img/temp-player.png" id="1_2jdbb"]
 [ext_resource type="Script" path="res://scenes/menus/combat_menu.gd" id="1_xa32i"]
 [ext_resource type="Texture2D" uid="uid://ciula6x347u21" path="res://assets/img/temp-enemy.png" id="2_1ent5"]
-[ext_resource type="Texture2D" uid="uid://c3y0kpnulo1b5" path="res://assets/img/settings-icon.png" id="4_sbia7"]
+[ext_resource type="PackedScene" uid="uid://clbgftj4ge2rs" path="res://scenes/entities/settings_button.tscn" id="4_qonnf"]
 
 [node name="CombatMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -44,6 +44,7 @@ texture = ExtResource("1_2jdbb")
 expand_mode = 5
 
 [node name="PlayerHealthLabel" type="Label" parent="NinePatchRect/LeftBorder"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Health: 10/10"
@@ -97,17 +98,9 @@ text = "Energy: 3/3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings" type="TextureButton" parent="NinePatchRect"]
+[node name="Settings" parent="NinePatchRect" instance=ExtResource("4_qonnf")]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -106.0
-offset_right = 150.0
-offset_bottom = 256.0
-grow_horizontal = 0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("4_sbia7")
-stretch_mode = 0
+offset_left = -105.0
+offset_right = 151.0
 
 [connection signal="pressed" from="NinePatchRect/Settings" to="." method="_on_settings_pressed"]

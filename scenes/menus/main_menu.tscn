@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://jan3iujutd2k"]
+[gd_scene load_steps=5 format=3 uid="uid://jan3iujutd2k"]
 
 [ext_resource type="Script" path="res://scenes/menus/main_menu.gd" id="1_ee684"]
 [ext_resource type="FontFile" uid="uid://3wau5ec1xpv2" path="res://assets/font/helvetica-compressed.otf" id="3_2xjgv"]
+[ext_resource type="Theme" uid="uid://c2e6hmhqtwxbx" path="res://assets/themes/button_theme.tres" id="4_50vmn"]
 [ext_resource type="FontFile" uid="uid://cjaj1rlxngw3" path="res://assets/font/helvetica.ttf" id="4_risto"]
 
 [node name="MainMenu" type="MarginContainer"]
@@ -59,19 +60,23 @@ alignment = 1
 
 [node name="Play" type="Button" parent="Control/ButtonContainer"]
 layout_mode = 2
+theme = ExtResource("4_50vmn")
 theme_override_font_sizes/font_size = 32
 text = "Play!"
 
 [node name="Settings" type="Button" parent="Control/ButtonContainer"]
 layout_mode = 2
+theme = ExtResource("4_50vmn")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
 
 [node name="Quit" type="Button" parent="Control/ButtonContainer"]
 layout_mode = 2
+theme = ExtResource("4_50vmn")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
 [connection signal="pressed" from="Control/ButtonContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/ButtonContainer/Play" to="Control/ButtonContainer/Play" method="_on_pressed"]
 [connection signal="pressed" from="Control/ButtonContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Control/ButtonContainer/Quit" to="." method="_on_quit_pressed"]

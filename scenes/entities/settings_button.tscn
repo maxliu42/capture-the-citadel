@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://clbgftj4ge2rs"]
+
+[ext_resource type="Theme" uid="uid://cs5w8ekhsqgtb" path="res://assets/themes/settings_button_theme.tres" id="1_bj2fl"]
+[ext_resource type="Texture2D" uid="uid://c3y0kpnulo1b5" path="res://assets/img/settings-icon.png" id="2_sn4vh"]
+[ext_resource type="Script" path="res://scenes/entities/settings_button.gd" id="3_fk2yy"]
+
+[node name="Settings" type="TextureButton"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1366.0
+offset_right = -1110.0
+offset_bottom = 256.0
+grow_horizontal = 0
+scale = Vector2(0.4, 0.4)
+theme = ExtResource("1_bj2fl")
+texture_normal = ExtResource("2_sn4vh")
+texture_pressed = ExtResource("2_sn4vh")
+texture_hover = ExtResource("2_sn4vh")
+texture_disabled = ExtResource("2_sn4vh")
+texture_focused = ExtResource("2_sn4vh")
+script = ExtResource("3_fk2yy")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

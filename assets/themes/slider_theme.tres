@@ -1,0 +1,89 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://wkcocm164du8"]
+
+[ext_resource type="Texture2D" uid="uid://h1j0lrj4i5wp" path="res://assets/img/slider_grabber.png" id="1_ivrg1"]
+
+[sub_resource type="Image" id="Image_6giqs"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_opwdb"]
+image = SubResource("Image_6giqs")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xywv2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 6
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgjmu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 6
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1asn3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 6
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="Image" id="Image_ntdx1"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_gaq8b"]
+image = SubResource("Image_ntdx1")
+
+[resource]
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("1_ivrg1")
+HSlider/icons/grabber_disabled = ExtResource("1_ivrg1")
+HSlider/icons/grabber_highlight = ExtResource("1_ivrg1")
+HSlider/icons/tick = SubResource("ImageTexture_opwdb")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_xywv2")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_tgjmu")
+HSlider/styles/slider = SubResource("StyleBoxFlat_1asn3")
+VSlider/constants/center_grabber = 0
+VSlider/constants/grabber_offset = 0
+VSlider/icons/grabber = ExtResource("1_ivrg1")
+VSlider/icons/grabber_disabled = ExtResource("1_ivrg1")
+VSlider/icons/grabber_highlight = ExtResource("1_ivrg1")
+VSlider/icons/tick = SubResource("ImageTexture_gaq8b")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_xywv2")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_tgjmu")
+VSlider/styles/slider = SubResource("StyleBoxFlat_1asn3")
