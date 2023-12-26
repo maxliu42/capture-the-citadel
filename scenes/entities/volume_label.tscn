@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci64pulvb13t5"]
+
+[ext_resource type="FontFile" uid="uid://cjaj1rlxngw3" path="res://assets/font/helvetica.ttf" id="1_3ehkq"]
+[ext_resource type="Script" path="res://scenes/entities/volume_label.gd" id="2_y6e20"]
+
+[node name="VolumeLabel" type="Label"]
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0.2, 0.203922, 0.211765, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_3ehkq")
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+script = ExtResource("2_y6e20")

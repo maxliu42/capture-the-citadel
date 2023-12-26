@@ -25,6 +25,7 @@ SceneManager="*res://global/scene_manager.tscn"
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
+window/size/resizable=false
 
 [rendering]
 

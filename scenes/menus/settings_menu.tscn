@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ottw4aijx3r6"]
 
 [ext_resource type="Script" path="res://scenes/menus/settings_menu.gd" id="1_5s6vj"]
-[ext_resource type="FontFile" uid="uid://cjaj1rlxngw3" path="res://assets/font/helvetica.ttf" id="2_jqe6k"]
+[ext_resource type="PackedScene" uid="uid://ci64pulvb13t5" path="res://scenes/entities/volume_label.tscn" id="2_3dnh7"]
+[ext_resource type="PackedScene" uid="uid://bu4n2rh6y364n" path="res://scenes/entities/volume_slider.tscn" id="3_jcouu"]
 [ext_resource type="Theme" uid="uid://c2e6hmhqtwxbx" path="res://assets/themes/button_theme.tres" id="3_kvy7x"]
-[ext_resource type="Theme" uid="uid://wkcocm164du8" path="res://assets/themes/slider_theme.tres" id="3_lanyt"]
 
 [node name="SettingsMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -25,33 +25,34 @@ layout_mode = 2
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="MusicVolumeLabel" type="Label" parent="ButtonContainer"]
+[node name="MasterVolumeLabel" parent="ButtonContainer" instance=ExtResource("2_3dnh7")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_outline_color = Color(0.2, 0.203922, 0.211765, 1)
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("2_jqe6k")
-theme_override_font_sizes/font_size = 38
-text = "Music Volume: 70%"
-horizontal_alignment = 1
+text = "Master Volume: "
+bus_name = "Master"
 
-[node name="MusicVolumeSlider" type="HSlider" parent="ButtonContainer"]
+[node name="MasterVolumeSlider" parent="ButtonContainer" instance=ExtResource("3_jcouu")]
 layout_mode = 2
-theme = ExtResource("3_lanyt")
+step = 0.01
+bus_name = "Master"
 
-[node name="EffectsVolumeLabel" type="Label" parent="ButtonContainer"]
+[node name="MusicVolumeLabel" parent="ButtonContainer" instance=ExtResource("2_3dnh7")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_outline_color = Color(0.2, 0.203922, 0.211765, 1)
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("2_jqe6k")
-theme_override_font_sizes/font_size = 38
-text = "Effects Volume: 70%"
-horizontal_alignment = 1
+text = "Music Volume: "
+bus_name = "Music"
 
-[node name="EffectsVolumeSlider" type="HSlider" parent="ButtonContainer"]
+[node name="MusicVolumeSlider" parent="ButtonContainer" instance=ExtResource("3_jcouu")]
 layout_mode = 2
-theme = ExtResource("3_lanyt")
+step = 0.01
+
+[node name="EffectsVolumeLabel" parent="ButtonContainer" instance=ExtResource("2_3dnh7")]
+layout_mode = 2
+text = "Effects Volume: "
+bus_name = "Effects"
+
+[node name="EffectsVolumeSlider" parent="ButtonContainer" instance=ExtResource("3_jcouu")]
+layout_mode = 2
+step = 0.01
+bus_name = "Effects"
 
 [node name="Control" type="Control" parent="ButtonContainer"]
 layout_mode = 2

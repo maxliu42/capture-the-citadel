@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu4n2rh6y364n"]
+
+[ext_resource type="Theme" uid="uid://wkcocm164du8" path="res://assets/themes/slider_theme.tres" id="1_gi7v5"]
+[ext_resource type="Script" path="res://scenes/menus/MusicVolumeSlider.gd" id="2_fwvhx"]
+
+[node name="VolumeSlider" type="HSlider"]
+theme = ExtResource("1_gi7v5")
+max_value = 1.0
+script = ExtResource("2_fwvhx")
+bus_name = "Music"
